@@ -6,11 +6,13 @@ function createGalleryMarkup(items) {
   return items
     .map(
       ({ preview, original, description }) =>
-        `    
+        `  <li> 
     <a class="gallery__item" href="${original}">
-      <img loading="lazy" class="gallery__image" src="${preview}" alt="${description}" width="350"
-      height="240""/>
+      <img loading="lazy" class="gallery__image" src="${preview}" 
+      alt="${description}" width="350"
+      height="240"" style="display: block"/>
     </a> 
+    </li> 
     `,
     )
     .join('');
